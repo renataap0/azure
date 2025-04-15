@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyFair - Sua beleza em primeiro lugar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="BeautyFair">
+                <span>BeautyFair</span>
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Entrar</button>
+                <p class="register-link">Não tem uma conta? <a href="#" id="showRegister">Registre-se</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Cadastro</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm">Confirmar Senha</label>
+                    <input type="password" id="reg-confirm" required>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Banner Principal -->
+    <section id="home" class="hero-banner">
+        <div class="banner-content">
+            <h1>Descubra sua beleza única</h1>
+            <p>Produtos premium para realçar sua naturalidade</p>
+            <a href="#produtos" class="btn-primary">Explorar Coleção</a>
+        </div>
+        <div class="banner-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#1a237e"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#1a237e"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#1a237e"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Destaques</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Produtos Premium</h3>
+                    <p>Ingredientes naturais e fórmulas exclusivas para cuidar da sua pele.</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Receba seus produtos em até 48 horas na região metropolitana.</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Cosméticos Veganos</h3>
+                    <p>Produtos cruelty-free e sem testes em animais.</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <h3>Ofertas Exclusivas</h3>
+                    <p>Descontos especiais para membros do clube BeautyFair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="skincare">Skincare</button>
+                <button class="category-btn" data-category="makeup">Maquiagem</button>
+                <button class="category-btn" data-category="haircare">Cabelos</button>
+                <button class="category-btn" data-category="fragrances">Perfumes</button>
+            </div>
+            <div class="products-grid" id="productsContainer">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-tabs">
+                <div class="tab-header">
+                    <div class="tab-btn active" data-tab="consultoria">Consultoria</div>
+                    <div class="tab-btn" data-tab="tratamentos">Tratamentos</div>
+                    <div class="tab-btn" data-tab="cursos">Cursos</div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="consultoria">
+                        <div class="service-details">
+                            <div class="service-image">
+                                <img src="images/consultoria.jpg" alt="Consultoria de Beleza">
+                            </div>
+                            <div class="service-info">
+                                <h3>Consultoria de Beleza Personalizada</h3>
+                                <p>Nossos especialistas analisam seu tipo de pele, formato facial e estilo pessoal para criar um plano de beleza exclusivo para você.</p>
+                                <ul>
+                                    <li>Análise completa da pele</li>
+                                    <li>Recomendação de produtos ideais</li>
+                                    <li>Tutorial de maquiagem personalizado</li>
+                                    <li>Plano de cuidados diários</li>
+                                </ul>
+                                <a href="#agendamento" class="btn-secondary">Agendar Consultoria</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tratamentos">
+                        <!-- Conteúdo de tratamentos -->
+                    </div>
+                    <div class="tab-pane" id="cursos">
+                        <!-- Conteúdo de cursos -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a BeautyFair</h2>
+                    <p>A BeautyFair nasceu da paixão por beleza autêntica e produtos que respeitam a pele e o meio ambiente. Desde 2015, nos dedicamos a oferecer cosméticos de alta qualidade com ingredientes naturais e fórmulas inovadoras.</p>
+                    <p>Nossa missão é ajudar você a descobrir e realçar sua beleza única, com produtos que cuidam da sua pele enquanto respeitam o planeta.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0</span>+
+                            <span class="stat-label">Produtos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100000">0</span>+
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>+
+                            <span class="stat-label">Prêmios</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/equipe.jpg" alt="Equipe BeautyFair">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O que dizem sobre nós</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Os produtos da BeautyFair transformaram minha rotina de skincare. Minha pele nunca esteve tão saudável!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/cliente1.jpg" alt="Ana Silva">
+                            <div class="author-info">
+                                <h4>Ana Silva</h4>
+                                <span>Cliente desde 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <!-- Outro depoimento -->
+                </div>
+                <div class="testimonial-item">
+                    <!-- Outro depoimento -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Blog -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Dicas de Beleza</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog1.jpg" alt="Rotina de Skincare">
+                        <div class="blog-date">15 MAR 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="#">Como montar a rotina de skincare perfeita para seu tipo de pele</a></h3>
+                        <p>Descubra os passos essenciais para cuidar da sua pele de manhã e à noite, adaptados para seu tipo específico de pele.</p>
+                        <a href="#" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <!-- Outro artigo -->
+                </article>
+                <article class="blog-card">
+                    <!-- Outro artigo -->
+                </article>
+            </div>
+            <div class="blog-cta">
+                <a href="#" class="btn-secondary">Ver todas as dicas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Assine nossa newsletter</h3>
+                    <p>Receba dicas exclusivas, ofertas especiais e novidades da BeautyFair diretamente no seu e-mail.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn-primary">Assinar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Endereço</h4>
+                            <p>Av. Beleza Natural, 1234<br>São Paulo - SP</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Telefone</h4>
+                            <p>(11) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>contato@beautyfair.com.br</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nome</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Assunto</label>
+                            <input type="text" id="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502217!3d-23.565734367638194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1633039394931!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>BeautyFair</h4>
+                    <p>Sua beleza em primeiro lugar. Produtos de qualidade para cuidar da sua pele, cabelos e autoestima.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Maquiagem</a></li>
+                        <li><a href="#">Cabelos</a></li>
+                        <li><a href="#">Perfumes</a></li>
+                        <li><a href="#">Corpo e Banho</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Assine e receba nossas novidades e ofertas exclusivas.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="payment-methods">
+                        <img src="images/visa.png" alt="Visa">
+                        <img src="images/mastercard.png" alt="Mastercard">
+                        <img src="images/amex.png" alt="American Express">
+                        <img src="images/paypal.png" alt="PayPal">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2023 BeautyFair. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
